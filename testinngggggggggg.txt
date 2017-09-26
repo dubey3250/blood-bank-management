@@ -1,0 +1,21 @@
+<?php
+$hospital_name=$_POST['hospital_name'];
+$customer_name=$_POST['customer_name'];
+$customer_id=$_POST['customer_id'];
+$dob=$_POST['dob'];
+$blood_group=$_POST['blood_group'];
+$gender=$_POST['gender'];
+$quantity=$_POST['quantity'];
+$time_of_request=$_POST['time_of_request'];
+$p_addr=$_POST['p_addr'];
+$contact_no=$_POST['contact_no'];
+$type_of_doner=$_POST['type_of_doner'];
+$date_of_donation=$_POST['date_of_donation'];
+
+mysql_connect('localhost','root','');
+mysql_select_db("hackathon");
+$query="insert into employee(emp_id,emp_name,contact_no,qualification,salery,employee_desc,address) 
+values('$emp','$emp_name','$contact','$qualification','$salery','$emp_designation','$address')";
+mysql_query($query);
+header("location:profile2.php?m=1");
+?>
